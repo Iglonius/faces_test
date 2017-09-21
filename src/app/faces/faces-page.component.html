@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-12">
+    <h1 class="yellow-color">ANSIKTEN</h1>
+    <p>Se alla glada ansikten på de du jobbar med.</p>
+    <input type="text" id="search" placeholder="Vem söker du?" (keydown.enter)="onSearch()" [(ngModel)]="searchTerm"/>
+  </div>
+</div>
+<div class="row">
+    <hiq-face-item *ngFor="let face of serchResult | async" [face]="face"></hiq-face-item>
+</div>

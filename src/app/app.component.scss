@@ -1,0 +1,46 @@
+img {
+  width: auto;
+  height: 50px;
+  margin-top: 10px;
+  float:left;
+}
+
+.toolbar-content {
+  max-width: 1220px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sub-logo {
+  font-family: 'Reenie Beanier';
+  font-size: 32px;
+  line-height: 50px;
+  color:white;
+  margin: 20px 0 0 10px;
+  float:left;
+  font-weight: 700;
+}
+
+ul#navbar {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-table;
+  color: white;
+  float: right;
+}
+
+li.nav-item {
+  display: block;
+  float: left;
+  line-height: 70px;
+  margin-right: 11px;
+}
+
+.page-container {
+  position: relative;
+  max-width: 1220px;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 22px;
+}

@@ -1,0 +1,34 @@
+{
+  "faces": [
+  {
+    "name": "Mikael Ekroth",
+    "email": "mikael.ekroth@hiq.se",
+    "photoUrl": "../assets/images/no-img-1.png",
+    "teams":["pekhing","cpa"]
+  },
+  {
+    "name": "David Stenbäck",
+    "email": "david.stenbäck@hiq.se",
+    "photoUrl": "../assets/images/no-img-2.png",
+    "teams": ["pekhing","inhouse"]
+  },
+  {
+    "name": "Emma Melander",
+    "email": "emma.melander@hiq.se",
+    "photoUrl": "../assets/images/no-img-3.png",
+    "teams": ["pekhing"]
+  },
+  {
+    "name": "Niklas Fransson",
+    "email": "niklas.fransson@hiq.se",
+    "photoUrl": "../assets/images/no-img-4.png",
+    "teams": ["pekhing","ericsson"]
+  },
+  {
+    "name": "Ikshu Dutta",
+    "email": "ikshu.dutta@hiq.se",
+    "photoUrl": "../assets/images/no-img-5.png",
+    "teams": ["ericsson"]
+  }
+  ]
+}

@@ -1,0 +1,15 @@
+h1 {
+  font-family: 'Reenie Beanier', serif !important;
+  text-shadow: none;
+  font-weight: bolder; }
+
+h1.under-title {
+  font-size: 32px; }
+
+h2 {
+  font-size: 28px; }
+
+h3 {
+  font-size: 18px; }
+
+/*# sourceMappingURL=experience-list.component.css.map */

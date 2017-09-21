@@ -1,0 +1,28 @@
+<div class="form-group">
+  <label for="exp-title">{{titleLabel}}</label>
+  <input type="text" class="form-control" id="exp-title" placeholder="Ange en {{titleLabel}}" value="" [(ngModel)]="title">
+</div>
+<div class="form-group">
+  <label for="exp-title">{{organisationLabel}}</label>
+  <input type="text" class="form-control" id="exp-organisation" placeholder="Ange en {{organisationLabel}}" value="" [(ngModel)]="organisation">
+</div>
+<div class="row">
+  <div class="col-5 float-left">
+    <div class="form-group">
+      <label>Start datum</label>
+      <datepicker [(ngModel)]="begin" [maxDate]="maxDate"></datepicker>
+    </div>
+  </div>
+  <div class="col-5 float-left">
+    <div class="form-group">
+      <label>Slut datum</label>
+      <datepicker [(ngModel)]="end" [maxDate]="maxDate"></datepicker>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <label for="exp-description">Beskrivning</label>
+  <textarea class="form-control" id="exp-description" placeholder="Beskriv dina erfarenheter som du tog med dig." [(ngModel)]="description"></textarea>
+</div>
+<button class="float-right col-2 btn-save" (click)="save()">Spara</button>
+<button class="float-right col-2 btn-attention" (click)="remove()" *ngIf="!isNew">Ta bort</button>

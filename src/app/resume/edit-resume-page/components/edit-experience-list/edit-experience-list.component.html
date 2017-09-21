@@ -1,0 +1,14 @@
+<h2>{{experienceTitle}} <i class="fa fa-plus toggle-edit" aria-hidden="true" (click)="isCollapsed = !isCollapsed"></i></h2>
+<!-- <hiq-experience-item *ngFor="let exp of experiences" [experience]="exp"></hiq-experience-item> -->
+
+<div class="experience-item">
+  <div (collapsed)="collapsed($event)"
+       (expanded)="expanded($event)"
+       [collapse]="isCollapsed"
+       class="card card-block card-header clearfix">
+    <hiq-experience-item-form [type]="experienceType" (onSave)="save($event)" [experience]="null"></hiq-experience-item-form>
+  </div>
+</div>
+<div *ngIf="experiences != null">
+  <hiq-edit-experience-item *ngFor="let exp of experiences" [experience]="exp"></hiq-edit-experience-item>
+</div>

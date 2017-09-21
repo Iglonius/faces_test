@@ -1,0 +1,15 @@
+<form (submit)="onSaveUser($event, name.value, sname.value, bio.value)">
+  <label for="name">Förnamn</label>
+  <input id="name" #name type="text" value="{{(user | async)?.firstname}}"/>
+  <label for="sname">Efternamn</label>
+  <input id="sname" #sname type="text" value="{{(user | async)?.lastname}}" />
+  <label for="email">Email</label>
+  <input id="email" type="email" value="{{(user | async)?.email}}" disabled />
+  <label for="bio">Biografi</label>
+  <textarea id="bio" type="text" #bio>
+    {{(user | async)?.bio}}
+  </textarea>
+  <div class="right-button" >
+    <button class="btn-save" type="submit" [disabled]="savingInfo">{{saveButton}}</button>
+  </div>
+</form>

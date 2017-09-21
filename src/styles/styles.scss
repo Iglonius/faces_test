@@ -1,0 +1,71 @@
+@import 'variables';
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import '~font-awesome/scss/font-awesome';
+@import '_colors';
+@import '_font';
+@import '_mixings';
+@import '_form';
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  background: #efefef;
+  padding: 0;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1220px;
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+div[class^='col-'] {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 11px;
+}
+
+h1 {
+  font-family: 'Hiq Rough Black', sans-serif;
+  font-size: 4em;
+  margin: 10px 0;
+  letter-spacing: 2px;
+  text-shadow: -5px 0px 0px $magenta;
+}
+
+h2 {
+  font-family: 'Reenie Beanier', serif;
+  font-size: 2em;
+}
+
+h3 {
+  font-family:'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+em {
+  color: #ccc;
+  font-size: 9px;
+}
+
+.circle-black {
+  background: black;
+  border-radius: 50%;
+
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

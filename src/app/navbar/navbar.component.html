@@ -1,0 +1,22 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <button *ngIf="visible" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" [routerLink]="brandItem.path">
+    <img src="../../assets/images/hiq-logo.png" alt="{{brandItem.title}}">
+  </a>
+
+  <div *ngIf="visible" class="collapse navbar-collapse" id="navbar">
+    <ul class="navbar-nav mr-auto">
+      <li *ngFor="let menuItem of leftMenuItems"
+          class="nav-item" routerLinkActive="active" [ngClass]="getMenuItemClasses(menuItem)">
+        <a class="nav-item nav-link" [routerLink]="menuItem.path" routerLinkActive="active">{{menuItem.title}}</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngFor="let menuItem of rightMenuItems"
+          class="nav-item" routerLinkActive="active" [ngClass]="getMenuItemClasses(menuItem)">
+        <a class="nav-item nav-link" [routerLink]="menuItem.path" routerLinkActive="active">{{menuItem.title}}</a>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,12 @@
+<div class="experience-item clearfix">
+  <i class="fa fa-pencil float-right fa-2x toggle-edit" aria-hidden="true" (click)="isCollapsed = !isCollapsed"></i>
+  <h2>{{experience.title}} </h2>
+  <h3>{{experience.organisation}} {{experience.begin | date: 'yyyy/MM/dd'}} - {{experience.end | date: 'yyyy/MM/dd'}}</h3>
+  <p>{{experience.description}}</p>
+  <div (collapsed)="collapsed($event)"
+       (expanded)="expanded($event)"
+       [collapse]="isCollapsed"
+       class="card card-block card-header clearfix">
+    <hiq-experience-item-form [experience]="experience" [type]="experience.type" (onSave)="saveChanges($event)" (onRemove)="remove($event)"></hiq-experience-item-form>
+  </div>
+</div>

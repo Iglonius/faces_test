@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAiB;EACf,UAAU,EAAE,IAAI;EAEhB,OAAO,EAAE,WAAW;EACpB,OAAO,EAAE,QAAQ;EACjB,OAAO,EAAE,WAAW;EACpB,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,IAAI;EAEb,iBAAiB,EAAE,QAAQ;EAC3B,SAAS,EAAE,QAAQ;EACnB,eAAe,EAAE,MAAM",
+"sources": ["faces.component.scss"],
+"names": [],
+"file": "faces.component.css"
+}

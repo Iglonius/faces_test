@@ -1,0 +1,14 @@
+@import "../../../styles/colors";
+@import "../../../styles/_mixings";
+
+#register-button {
+  @include button(98%, white, $magenta);
+}
+
+#login-button {
+  @include button(98%, white, $cyan);
+}
+
+.center-text {
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+<div class="clearfix">
+  <h1 class="under-title">{{experienceTitle}}</h1>
+  <div *ngIf="experiences != null">
+    <hiq-experience-item *ngFor="let exp of experiences | async" [experience]="exp"></hiq-experience-item>
+  </div>
+</div>

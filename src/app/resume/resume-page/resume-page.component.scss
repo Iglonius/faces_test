@@ -1,0 +1,47 @@
+@import '../../../styles/_mixings';
+
+#printable {
+  @include box(white);
+  padding: 20px;
+}
+
+#user-info {
+
+  .hiq-logo {
+    img {
+      margin-left: 30px;
+      width: 150px;
+      height: auto;
+    }
+  }
+
+  .profile-image {
+    overflow: hidden;
+      max-height: 288px;
+      width: 288px;
+      height: auto;
+      margin-right: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+h1 {
+  font-family: 'Reenie Beanier', serif !important;
+  text-shadow: none;
+}
+
+h1.under-title {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 18px;
+}

@@ -1,0 +1,38 @@
+@import "../../../../../../styles/_mixings";
+
+.experience-item {
+  padding: 22px;
+  margin:11px;
+  @include box(white);
+}
+
+label {
+  margin-right: 11px;
+}
+
+.toggle-edit {
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+button.remove-button {
+  margin-right: 22px;
+  @include button(288px, white, $magenta)
+}
+
+button.remove-button,
+button {
+  width: 288px;
+  margin-top: 11px;
+}
+
+.card {
+  padding-bottom: 22px;
+}
+
+.form-inline {
+
+ .form-group {
+    margin-right: 11px !important;
+  }
+}

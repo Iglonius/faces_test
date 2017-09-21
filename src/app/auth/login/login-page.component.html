@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-11 col-md-7 col-lg-4 mx-auto center-text">
+    <h1>
+      LOGGA IN
+    </h1>
+    <div class="error magenta-color" *ngIf="!isVerified">
+      Ditt konto är inte veriferat. Du bör ha fått ett mail om att verfiera din mail emot HiScore. Om inte så klicka på
+      knappen nedan.
+      <button (click)="onSendNewVerification($event)">Skicka ny verfikation</button>
+    </div>
+
+    <div class="error magenta-color" *ngIf="error">
+      {{error}}
+    </div>
+
+    <form (submit)="onLogin($event, email.value, password.value)">
+      <label for="email">Email</label>
+      <input #email id="email" type="email" placeholder="Ange din email"/>
+      <label for="password">Lösenord</label>
+      <input #password id="password" type="password" placeholder="Ange ditt lösenord"/>
+      <button id="login-button" type="submit">Logga in</button>
+    </form>
+    <button id="register-button" (click)="onSignUp($event)">Registrera dig!</button>
+  </div>
+</div>

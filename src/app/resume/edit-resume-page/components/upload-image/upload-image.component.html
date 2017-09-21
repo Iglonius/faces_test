@@ -1,0 +1,33 @@
+<div id="upload-image">
+
+  <img [src]="imageSrc" alt="Ditt face" *ngIf="imageSrc">
+  <div *ngIf="progress > 0" [style.width]="progress+'%'" class="progress-bar"></div>
+
+  <button type="button" class="btn-save" (click)="staticModal.show()">Ladda upp bild</button>
+</div>
+
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Ladda upp bild</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="display: block; width: 300px; margin: 0 auto;">
+          <div *ngIf="image.image">
+            <img [src]="image.image" [width]="cropperSettings.width" [height]="cropperSettings.height">
+          </div>
+
+          <img-cropper #cropper [image]="image" [settings]="cropperSettings"></img-cropper>
+          <input #imageFile id="image" name="file" type="file" (change)="onSelectFileChanged($event)"/>
+          <label for="image">{{labelText}}</label>
+          <button class="upload-button btn-save" (click)="onUploadPhoto($event, imageFile.files[0])" type="button" [disabled]="!uploadValid">Ladda upp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

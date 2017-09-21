@@ -1,0 +1,50 @@
+@import 'colors';
+
+@mixin box-shadow($shadow-distance, $shadow-color) {
+  -webkit-box-shadow: $shadow-distance $shadow-distance 0px 0px $shadow-color;
+  -moz-box-shadow: $shadow-distance $shadow-distance 0px 0px $shadow-color;
+  box-shadow: $shadow-distance $shadow-distance 0px 0px $shadow-color;
+}
+
+@mixin circle($color: black, $width: 200px, $height: 200px) {
+  width: $width;
+  height: $height;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: $color;
+}
+
+@mixin button($width, $text-color: white, $bg-color: $cyan, $disabled-color: #ccc) {
+  width: $width;
+  color: $text-color;
+  @include box($bg-color);
+
+  line-height: 44px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 22px;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background: darken($bg-color, 2%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: default;
+    margin-top: 22px;
+    @include box($disabled-color);
+  }
+}
+
+@mixin box($color) {
+  background: $color;
+  @include box-shadow(5px, darken($color, 10%));
+}

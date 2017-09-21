@@ -1,0 +1,23 @@
+#upload-image {
+  max-width: 288px;
+}
+
+.progress-bar {
+  background: hotpink;
+  display: block;
+  height: 5px;
+  margin-top: -5px;
+}
+
+img {
+  max-width: 288px;
+  max-height: 288px;
+  min-width: 200px;
+  /* min-height: 288px; */
+  width: 100%;
+  height: auto;
+}
+
+button.upload-button{
+  margin-bottom: 22px;
+}

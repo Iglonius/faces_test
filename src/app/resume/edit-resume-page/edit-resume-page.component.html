@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-12">
+    <h1>MITT CV</h1>
+    <p>Här har du möjlighet att redigera ditt nuvarande CV. Du har också möjlighet att ladda upp ett foto på dig vilket uppskattas om du gör. </p>
+    <p>Fotografiet på dig ska vara så pass bra att det ska kunna visas face ut mot kund.</p>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-4" align="center">
+    <button class="btn-save" (click)="onPreview($event)" style="margin-bottom: 25px;">Förhandsgranska</button>
+    <hiq-upload-image></hiq-upload-image>
+  </div>
+  <div class="col-sm-12 col-md-7" align="center">
+    <hiq-edit-user-info></hiq-edit-user-info>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <hiq-edit-experience-list [experienceTitle]="'Tidigare erfarenheter'" [experienceType]="'work'" [experiences]="work | async"></hiq-edit-experience-list>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <hiq-edit-experience-list [experienceTitle]="'Utbildning'" [experienceType]="'education'" [experiences]="education | async"></hiq-edit-experience-list>
+  </div>
+</div>

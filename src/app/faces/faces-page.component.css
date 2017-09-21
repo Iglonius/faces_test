@@ -1,0 +1,12 @@
+.faces-container {
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: center; }
+
+/*# sourceMappingURL=faces-page.component.csst.css.map */

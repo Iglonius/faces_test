@@ -1,0 +1,26 @@
+<div class="row" (window:resize)="onWindowResize($event)">
+  <div class="col-11 col-md-7 col-lg-4 mx-auto center-text">
+    <div [hidden]="windowWidth > 439">
+      <h1>REGGA DIG</h1>
+    </div>
+    <div [hidden]="windowWidth < 440">
+      <h1>REGISTRERA DIG</h1>
+    </div>
+
+    <div class="error magenta-color" role="alert" *ngIf="error">
+      {{error}}
+    </div>
+    <form (submit)="onRegisterUser($event, email.value, password.value, confirmPassword.value)">
+      <label for="email">Email</label>
+      <input #email type="email" id="email" placeholder="Ange din @hiq.se mail."/>
+      <label for="password">Lösenord</label>
+      <input #password type="password" id="password" placeholder="Ange ditt lösenord"/>
+      <label for="confirmPassword">Bekräfta lösenord</label>
+      <input #confirmPassword type="password" id="confirmPassword" placeholder="Bekräfta lösenordet"/>
+      <div class="colspan-1">
+        <button id="register-button" type="submit">Registrera</button>
+        <p class="link-to-login" (click)="onReturn($event)">Gå tillbaka</p>
+      </div>
+    </form>
+  </div>
+</div>
